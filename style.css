@@ -1,5 +1,6 @@
 html {
     --pad: 60px;
+
 }
 
 * {
@@ -184,11 +185,11 @@ body {
 @media only screen and (max-width: 500px) {
 
     .profile {
-        width: 170px;
+        width: 180px;
     }
 
     .embleme {
-        width: 90px;
+        width: 75px;
     }
 
     .bio {
@@ -198,7 +199,7 @@ body {
 
 
     .btn {
-        padding: 15px;
+        padding: 13px;
     }
 
     .btn a {
