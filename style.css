@@ -1,0 +1,218 @@
+html {
+    --pad: 60px;
+}
+
+* {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 2vw;
+    text-decoration: none;
+    
+}
+
+
+body {
+    background-color: #292929;
+    overflow: hidden;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.container { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.profile {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: var(--pad);
+    animation: fade-in 1.5s ease-in-out;
+}
+
+.bio {
+    color: #e9e9e9;
+    text-align: center;
+    margin: 0 auto;
+
+    font-size: 0.8em;
+    font-weight: 200;
+    width: 1000px;
+    padding-top: var(--pad);
+    animation: fade-in 2s ease-in-out;
+}
+
+.download {
+    color: #e9e9e9;
+    font-size: 1em; /* 20% smaller than the original size */
+    margin: 0 auto;
+    padding-top: var(--pad);
+}
+
+.download-arrow {
+    animation: bounce 1.5s infinite;
+    animation: fade-in 2.5s ease-in-out;
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+}
+ 
+    
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    padding-top: var(--pad);
+    animation: fade-in 3s ease-in-out;
+}
+
+.btn {
+    background-color: #e9e9e9;
+    border: none;
+    border-radius: 5px;
+    color: #292929;
+    cursor: pointer;
+
+
+}
+
+.links .btn a {
+    font-weight: 400;
+}
+
+.embleme {
+    box-sizing: border-box;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: var(--pad);
+    width: 150px;
+    animation: fade-in 3.25s ease-in-out;
+}    
+    
+
+/* mobile view start */
+
+@media only screen and (max-width: 1100px) {
+
+    .profile {
+        width: 300px;
+    }
+
+    .embleme {
+        width: 100px;
+    }
+
+    .bio {
+        width: 800px;
+    }
+}
+
+
+@media only screen and (max-width: 815px) {
+
+    .profile {
+        width: 250px;
+    }
+
+    .embleme {
+        width: 80px;
+    }
+
+    .bio {
+        width: 700px;
+        font-size: 1.3em;
+    }
+
+    
+}
+@media only screen and (max-width: 630px) {
+
+    .profile {
+        width: 200px;
+    }
+
+    .embleme {
+        width: 80px;
+    }
+
+    .bio {
+        width: 550px;
+        font-size: 1.3em;
+    }
+  
+}
+@media only screen and (max-width: 550px) {
+
+    .profile {
+        width: 150px;
+    }
+
+    .embleme {
+        width: 70px;
+    }
+
+    .bio {
+        width: 500px;
+        font-size: 1.7em;
+    }
+  
+}
+
+@media only screen and (max-width: 500px) {
+
+    .profile {
+        width: 170px;
+    }
+
+    .embleme {
+        width: 90px;
+    }
+
+    .bio {
+        width: 300px;
+        font-size: 1.9em;
+    }
+
+
+    .btn {
+        padding: 15px;
+    }
+
+    .btn a {
+        font-size: large;
+    }
+
+    .download {
+        font-size: 3em;
+    }
+
+  
+}
+
+/* mobile view end */
+
