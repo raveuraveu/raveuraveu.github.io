@@ -1,55 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
-  <title>RAVEU</title>
-   <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/FsDw6Gx/smiley-favicon-circle.png"/>
-  <link rel="stylesheet" href="style.css">
 
-  <!-- Meta Pixel Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAVEU</title>
 
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '719927943210316');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=719927943210316&ev=PageView&noscript=1"
-  /></noscript>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-  <!-- End Meta Pixel Code -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/css/uikit.min.css" />
 
 </head>
 
 <body>
+    <main uk-scrollspy="target: >; cls: uk-animation-fade; delay: 200">
 
-<div class="container">
-    <img class="profile" src="https://i.ibb.co/QCMdSRM/RAVEU-2023-no-bg-500px-width.png" alt="Profile Picture">
 
-    <p class="bio">
-        RAVEU IS A RECORD LABEL COMMITTED TO TECHNO CULTURE. OUR FOCUS IS ON HARD TECHNO SOUND WITH A PROGRESSIVE VISION.
-    </p>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="nav-menu" x-data="{ open: false }">
 
-    <p class="download download-arrow">
-        ↓ 
-    </p>
+                <input type="checkbox" role="button" aria-label="Display the menu" class="menu float-end"
+                    x-ref="checkbox"
+                    @click="open = !open">
 
-    <div class="links">
-        <button class="btn"><a href="https://raveu.bandcamp.com/track/do-anything" target="_blank">DO ANYTHING</a></button>
-        <img class="embleme" src="https://i.ibb.co/xjSFxX6/RAVEU-2022-logo-SMILEY-500x500.png" alt="Profile Picture">
-    </div>
-</div>
+                <ul class="nav-menu-items fw-bold" tabindex="0" 
+                x-show="open" 
+                @click.away="open = false, $refs.checkbox.checked = false" 
+                x-transition>
+                    <li class="py-5"><a href="#releases">Releases</a></li>
+                    <li class="py-5"><a href="#merch">Merch</a></li>
+                    <li class="py-5"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <img src="/img/raveu_logo_big.png" alt="Raveu" class="raveu-logo-hero w-100">
+        </section>
+
+
+        <!-- RELEASES SECTION -->
+        <section class="releases-section" uk-scrollspy="target: >; cls: uk-animation-fade; delay: 200">
+            <div class="raveu-text fw-bold">RAVEU IS A RECORD LABEL COMMITTED TO TECHNO CULTURE. <br>OUR FOCUS IS ON
+                HARD
+                TECHNO SOUND WITH A PROGRESSIVE VISION.
+            </div>
+            <img src="/img/orange_lines.png" alt="" class="orange-lines w-75">
+            <div class="releases-container mt-1" id="releases">
+
+                <div class="hero-container">
+                    <div class="environment"></div>
+                    <h2 class="hero glitch layers" data-text="releases"><span class="title text-center">RELEASES</span>
+                    </h2>
+                </div>
+                <div class="card releases-card">
+                    <div class="card-body row align-items-center">
+                        <div class="release-img col-12 col-xl-4 text-center"><img src="/img/raveu-cover.jpg"
+                                alt="New release cover" class="release-cover-img mb-md-3"></div>
+                        <div class="release-info d-flex flex-column col-12 col-xl-8">
+                            <div class="release-name">MAXX ROSSI - MECHANICS</div>
+                            <iframe class="mb-3" style="border: 0; width: 100%; height: 42px;"
+                                src="https://bandcamp.com/EmbeddedPlayer/track=1443845378/size=small/bgcol=333333/linkcol=e32c14/artwork=none/transparent=true/"
+                                seamless><a href="https://raveu.bandcamp.com/track/mechanics">Mechanics by Maxx
+                                    Rossi</a></iframe>
+                            <div class="release-description">Hard techno legend MAXX ROSSI has been setting the stage
+                                for
+                                unforgettable nights in cities across Europe and beyond for more than two decades. We
+                                are
+                                honored to present you his latest track 'Mechanics', an adrenaline-fueled ride that
+                                takes
+                                you deep into the heart of the London underground. Enjoy!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rectangle-bg"></div>
+                <div class="hero-container">
+                    <div class="environment pt-medium latest-text"></div>
+                    <h2 class="hero glitch layers" data-text="LATEST"><span class="text-white mt-large">LATEST
+                            RELEASES</span></h2>
+                </div>
+                <div class="other-releases row text-center pt-medium">
+                    <div class="col-12 col-lg-6 col-xl-3 mb-3">
+                        <iframe style="border: 0; width: 350px; height: 442px;"
+                            src="https://bandcamp.com/EmbeddedPlayer/album=2857993057/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/track=3894219635/transparent=true/"
+                            seamless><a href="https://raveu.bandcamp.com/album/old-gold-days">Old Gold Days by
+                                SYM</a></iframe>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3 mb-3">
+                        <iframe style="border: 0; width: 350px; height: 442px;"
+                            src="https://bandcamp.com/EmbeddedPlayer/track=1169538173/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/"
+                            seamless><a href="https://raveu.bandcamp.com/track/spore">Spore by Aluphobia</a></iframe>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3 mb-3">
+                        <iframe style="border: 0; width: 350px; height: 442px;"
+                            src="https://bandcamp.com/EmbeddedPlayer/track=1183580978/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/"
+                            seamless><a href="https://raveu.bandcamp.com/track/jungle-hawk">Jungle Hawk by Lucho The
+                                G</a></iframe>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-3 mb-3">
+                        <iframe style="border: 0; width: 350px; height: 442px;"
+                            src="https://bandcamp.com/EmbeddedPlayer/track=2418110488/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/"
+                            seamless><a href="https://raveu.bandcamp.com/track/golem">Golem by Idol</a></iframe>
+                    </div>
+                </div>
+                <div class="btn-wrapper pt-medium pb-medium">
+                    <div class="releases-button">
+                        <a href="https://raveu.bandcamp.com">
+                            MORE ON BANDCAMP
+                            <span class="shift">›</span>
+                        </a>
+                        <div class="mask"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="/img/Y7.png" class="w-100 merch-top-img" alt="">
+            </div>
+            <!-- <div class="float-end other-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisi augue,
+                gravida <br>eget ullamcorper vitae, tincidunt vitae eros. Curabitur eu lorem ut elit luctus <br>
+                fringilla
+                nec in magna. Sed imperdiet vehicula lorem porttitor fringilla.</div> -->
+            <img src="/img/orange-line-short.png" alt="" class="orange-lines w-75 float-end">
+
+        </section>
+
+
+        <!-- RELEASES SECTION -->
+        <section class="merch-section" id="merch" style="padding-top: 50px;">
+            <div class="hero-container">
+                <div class="environment"></div>
+                <h2 class="hero glitch layers" data-text="merch"><span class="title-2 text-center">MERCH</span></h2>
+            </div>
+            <div class="row pb-large" style="padding-top: 3em;">
+                <div class="col-12 col-lg-6 mb-5">
+                    <div id='product-component-1698077404811' style="margin: auto;"></div>
+                </div>
+                <div class="col-12 col-lg-6 mb-5">
+                    <div id='product-component-1698077961172' style="margin: auto;"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <div class="text-center bg-orange text-white other-text p-5">
+            If you are an artist, DJ, producer, event organizer and/or booking agent and would like to collaborate with our team, get in touch with us via email.
+        </div>
+        <section class="contact-section text-center" id="contact">
+            <div class="hero-container">
+                <div class="environment"></div>
+                <h2 class="hero glitch layers" data-text="contact"><span class="title-3 text-center">CONTACT US</span>
+                </h2>
+            </div>
+            <ul class="text-white fw-bold pb-0 pt-socials" style="list-style: none;">
+                <li class="social-title">E-MAIL:</li>
+                <li class="py-3 raveu-email">raveuraveu@gmail.com</li>
+                <li class="social-title">SOCIALS:</li>
+                <li class="py-3">
+                    <div class="social-icons">
+                        <a href="https://raveu.bandcamp.com"><i class="fa-brands fa-bandcamp me-3"></i></a>
+                        <a href="https://soundcloud.com/raveucollective"><i class="fa-brands fa-soundcloud me-3"></i></a>
+                        <a href="https://www.instagram.com/raveucollective/"><i class="fa-brands fa-instagram me-3"></i></a>
+                        <a href="https://www.facebook.com/raveuraveu/"><i class="fa-brands fa-facebook"></i></a>
+                    </div></li>
+            </ul>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/js/shopify.scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit-icons.min.js"></script>
+
 </body>
+
 </html>
