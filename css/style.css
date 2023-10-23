@@ -848,17 +848,19 @@ a, a:hover, a:active, a:focus {
 }
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 1568px) {
+  
+  .rectangle-bg {
+    display: none;
+}
+}
+
 @media screen and (max-width: 1200px) {
     .releases-card {
         margin-left: 5em;
         margin-right: 5em;
         margin-top: 1em;
     }
-
-    .rectangle-bg {
-        display: none;
-    }
-
 
     .release-cover-img {
         width: 100%;
